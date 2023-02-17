@@ -1,3 +1,15 @@
+/* Google Fonts */
+
+/* Work Sans */
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
+/* font-family: 'Work Sans', sans-serif; */
+
+
+
+body {
+    font-family: 'Work Sans', sans-serif;
+}
+
 #banner {
     display: block;
     width: 75%;
@@ -9,10 +21,9 @@
     bottom:  0px;
     right: 0px;
 }
-a {
-    text-decoration: none;
-}
-#one {
+
+.nav-link {
+    display: block;
     color: white;
     text-align: center;
     background-color: #20425E;
@@ -22,26 +33,6 @@ a {
     padding: 15px;
     margin-top: 30px;
     text-decoration: none;
-}
-#two {
-    color: white;
-    text-align: center;
-    background-color: #20425E;
-    width: 200px;
-    margin: auto;
-    border-radius: 25px;
-    padding: 15px;
-    margin-top: 30px;
-    text-decoration: none;
-}
-#three {
-    color: white;
-    text-align: center;
-    background-color: #20425E;
-    width: 200px;
-    margin: auto;
-    border-radius: 25px;
-    padding: 15px;
-    margin-top: 30px;
-    text-decoration: none;
+    font-weight:600;
+    font-size:28px;
 }
