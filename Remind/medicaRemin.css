@@ -43,25 +43,16 @@ a {
 
 }
 .selected-link {
-  color: white;
-  text-align: center;
   background-color: #C28219;
-  width: 175px;
-  margin: auto;
-  border-radius: 25px;
-  padding: 15px;
-  margin-top: 10px;
-  margin-bottom: 20px;
-  text-decoration: none;
-  display: inline;
 }
+
 #main {
- font-size: x-large;
- text-align: center;
- color: #20425E;
- display: flex;
-align-items: center;
-justify-content: center;
+  font-size: x-large;
+  text-align: center;
+  color: #20425E;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 #Second {
     font-size: x-large;

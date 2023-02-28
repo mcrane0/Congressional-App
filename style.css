@@ -15,12 +15,6 @@ body {
     width: 75%;
     margin: auto;
 }
-#logo {
-    width: 10%;
-    position: absolute;
-    bottom: 0px;
-    right: 0px;
-}
 
 .nav-link {
     display: block;
