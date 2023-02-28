@@ -28,23 +28,10 @@ div {
     text-align: center;
     padding-top: 30px;
 }
-#one {
+.nav-link {
     color: white;
     text-align: center;
     background-color: #20425E;
-    width: 175px;
-    margin: auto;
-    border-radius: 25px;
-    padding: 15px;
-    margin-top: 10px;
-    margin-bottom: 20px;
-    text-decoration: none;
-    display: inline;
-}
-#two {
-    color: white;
-    text-align: center;
-    background-color: #C28219;
     width: 175px;
     margin: auto;
     border-radius: 25px;
@@ -55,10 +42,10 @@ div {
     display: inline;
 
 }
-#three {
+.selected-link {
     color: white;
     text-align: center;
-    background-color: #20425E;
+    background-color: #C28219;
     width: 175px;
     margin: auto;
     border-radius: 25px;
