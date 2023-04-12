@@ -13,11 +13,13 @@ body {
 #button {
     display:flex;
     align-items: center;
+    justify-content:center;
     margin-bottom: 30px;
     margin-left:auto;
     margin-right:auto;
 }
 #logo {
+    margin-right:30px;
     width: 130px;
 }
 a {
@@ -25,7 +27,6 @@ a {
 }
 div {
     text-align: center;
-    padding-top: 30px;
 }
 .nav-link {
     color: white;
@@ -39,7 +40,6 @@ div {
     margin-bottom: 20px;
     text-decoration: none;
     display: inline;
-
 }
 .selected-link {
     background-color: #C28219;

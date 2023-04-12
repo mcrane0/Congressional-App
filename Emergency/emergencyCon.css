@@ -10,37 +10,36 @@ body {
     font-family: 'Noto Sans', sans-serif; 
 }
 
-#banner {
-    display: block;
-    width: 75%;
-    margin: auto;
+#button {
+    display:flex;
+    align-items: center;
+    justify-content:center;
+    margin-bottom: 30px;
+    margin-left:auto;
+    margin-right:auto;
 }
 #logo {
-    width: 10%;
-    position: absolute;
-    top:  0px;
-    left: 0px;
+    margin-right:30px;
+    width: 130px;
 }
 a {
     text-decoration: none;
 }
 div {
     text-align: center;
-    padding-top: 30px;
 }
 .nav-link {
     color: white;
     text-align: center;
     background-color: #20425E;
     width: 175px;
-    margin: auto;
+    margin: 0 5px;
     border-radius: 25px;
     padding: 15px;
     margin-top: 10px;
     margin-bottom: 20px;
     text-decoration: none;
     display: inline;
-
 }
 .selected-link {
     background-color: #C28219;

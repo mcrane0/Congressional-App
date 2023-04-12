@@ -10,56 +10,45 @@ body {
     font-family: 'Noto Sans', sans-serif; 
 }
 
-#banner {
-    display: block;
-    width: 75%;
-    margin: auto;
+#button {
+    display:flex;
+    align-items: center;
+    justify-content:center;
+    margin-bottom: 30px;
+    margin-left:auto;
+    margin-right:auto;
 }
 #logo {
-    width: 10%;
-    position: absolute;
-    top:  0px;
-    left: 0px;
+    margin-right:30px;
+    width: 130px;
 }
 a {
     text-decoration: none;
 }
-#button {
+div {
     text-align: center;
-    padding-top: 30px;
 }
 .nav-link {
-  color: white;
-  text-align: center;
-  background-color: #20425E;
-  width: 175px;
-  margin: auto;
-  border-radius: 25px;
-  padding: 15px;
-  margin-top: 10px;
-  margin-bottom: 20px;
-  text-decoration: none;
-  display: inline;
-
+    color: white;
+    text-align: center;
+    background-color: #20425E;
+    width: 175px;
+    margin: 0 5px;
+    border-radius: 25px;
+    padding: 15px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    text-decoration: none;
+    display: inline;
 }
 .selected-link {
-  background-color: #C28219;
+    background-color: #C28219;
 }
 
 #main {
-  font-size: x-large;
-  text-align: center;
-  color: #20425E;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-#Second {
-    font-size: x-large;
+    font-size:1.25em;
+    text-align: center;
     color: #20425E;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 /* The switch - the box around the slider */
 .switch {
@@ -67,17 +56,17 @@ a {
     display: inline-block;
     width: 60px;
     height: 34px;
-  }
+}
   
-  /* Hide default HTML checkbox */
-  .switch input {
+/* Hide default HTML checkbox */
+.switch input {
     opacity: 0;
     width: 0;
     height: 0;
-  }
+}
   
-  /* The slider */
-  .slider {
+/* The slider */
+.slider {
     position: absolute;
     cursor: pointer;
     top: 0;
@@ -87,9 +76,9 @@ a {
     background-color: #ccc;
     -webkit-transition: .4s;
     transition: .4s;
-  }
+}
   
-  .slider:before {
+.slider:before {
     position: absolute;
     content: "";
     height: 26px;
@@ -99,27 +88,27 @@ a {
     background-color: white;
     -webkit-transition: .4s;
     transition: .4s;
-  }
+}
   
-  input:checked + .slider {
+input:checked + .slider {
     background-color: #2196F3;
-  }
+}
   
-  input:focus + .slider {
+input:focus + .slider {
     box-shadow: 0 0 1px #2196F3;
-  }
+}
   
-  input:checked + .slider:before {
+input:checked + .slider:before {
     -webkit-transform: translateX(26px);
     -ms-transform: translateX(26px);
     transform: translateX(26px);
-  }
+}
   
-  /* Rounded sliders */
-  .slider.round {
+/* Rounded sliders */
+.slider.round {
     border-radius: 34px;
-  }
+}
   
-  .slider.round:before {
+.slider.round:before {
     border-radius: 50%;
-  }
+}

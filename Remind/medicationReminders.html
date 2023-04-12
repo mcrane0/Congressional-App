@@ -10,28 +10,27 @@
     <title>Medication Reminders - P.A.T.</title>
 </head>
 <body>
-    <div> <img id="banner" src="../Images/Banner.png" alt="Banner "></div>
-    <a href="../index.html"><img id="logo" src="../Images/Logo.jpeg" alt="P.A.T. Logo"></a>
     <div id="button">
-    <a href="../Exercise/exercise.html"><h1 class="nav-link">Exercises</h1></a>
-    <a href="../Emergency/emergencyContacts.html"><h1 class="nav-link">Emergency Contacts</h1></a>
-    <a href="../Remind/medicationReminders.html"><h1 class="nav-link selected-link">Medication Reminders</h1></a>
+        <a href="../index.html"><img id="logo" src="../Images/Logo.jpeg" alt="Logo"></a>
+        <a href="../Exercise/exercise.html"><h1 class="nav-link">Exercises</h1></a>
+        <a href="../Emergency/emergencyContacts.html"><h1 class="nav-link">Emergency Contacts</h1></a>
+        <a href="medicationReminders.html"><h1 class="nav-link selected-link">Medication Reminders</h1></a>
     </div>
+    <form action="" id="reminders-controls">
+        <input type="button" value="+ Add">
+    </form>
     <div id="main">
-        <h1>Levadopa/ Carbidopa </h1>
-        <input type="time"> <label class="switch">
-        <input type="checkbox">
-        <span class="slider round"></span>
-          </label>
-        
-      </div>
-    <div id="Second">
-        <h1>Labetalol </h1>
+        <h1>No medications added</h1>
+        <p>Click the "+ Add" button to add a medication reminder.</p>
+        <br />
+        <h3>Levadopa/ Carbidopa</h3>
         <input type="time"> 
         <label class="switch">
             <input type="checkbox">
             <span class="slider round"></span>
-          </label>
+        </label>
+        
     </div>
+    <script src="script.js"></script>
 </body>
 </html>
