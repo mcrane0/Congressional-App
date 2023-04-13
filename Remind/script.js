@@ -26,17 +26,19 @@ addMedBtn.onclick = function (){
         console.log(medTable);
 
         // PUT IN SEPARATE FUNCTION SOMETIME
-        medTableElem.innerHTML = "<ul>\n";
+        // medTableElem.innerHTML = "<ul>\n";
+        medTableElem.innerHTML = "";
         for (m of medTable){
             medTableElem.innerHTML += ("<li>\n" + m + 
-            `<input type="time"> 
+            `<br />
+            <input type="time"> 
             <label class="switch">
                 <input type="checkbox">
                 <span class="slider round"></span>
             </label>` + 
             "\n</li>\n"); 
         }
-        medTableElem.innerHTML += "\n</ul>"
+        // medTableElem.innerHTML += "\n</ul>"
     }
     addMedFormCancelBtn.onclick = function (){
         if (medTable.length == 0){
@@ -46,17 +48,19 @@ addMedBtn.onclick = function (){
         }
         else {
             // PUT IN SEPARATE FUNCTION SOMETIME
-        medTableElem.innerHTML = "<ul>\n";
-        for (m of medTable){
-            medTableElem.innerHTML += ("<li>\n" + m + 
-            `<input type="time"> 
-            <label class="switch">
-                <input type="checkbox">
-                <span class="slider round"></span>
-            </label>` + 
-            "\n</li>\n"); 
-        }
-        medTableElem.innerHTML += "\n</ul>"
+            // medTableElem.innerHTML = "<ul>\n";
+            medTableElem.innerHTML = "";
+            for (m of medTable){
+                medTableElem.innerHTML += ("<li>\n" + m + 
+                `<br />
+                <input type="time"> 
+                <label class="switch">
+                    <input type="checkbox">
+                    <span class="slider round"></span>
+                </label>` + 
+                "\n</li>\n"); 
+            }
+            // medTableElem.innerHTML += "\n</ul>"
         }
     }
 
