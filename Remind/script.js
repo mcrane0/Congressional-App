@@ -6,6 +6,7 @@ const medTableElem = document.getElementById("main");
 console.dir(medTableElem);
 
 const addMedBtn = document.getElementById("add-med");
+const remMedBtn = document.getElementById("rem-med");
 
 addMedBtn.onclick = function (){
     medTableElem.innerHTML = 
@@ -25,45 +26,84 @@ addMedBtn.onclick = function (){
         medTable.push(addMedFormName.value);
         console.log(medTable);
 
-        // PUT IN SEPARATE FUNCTION SOMETIME
-        // medTableElem.innerHTML = "<ul>\n";
-        medTableElem.innerHTML = "";
+        displayMedTbl();
+    }
+    addMedFormCancelBtn.onclick = function (){
+        displayMedTbl();
+    }
+
+};
+
+remMedBtn.onclick = function (){
+    medTableElem.innerHTML = 
+    `<p>Enter medication number to remove:</p>
+    <form id="rem-med-form">
+        <label for="med-name">Number:</label><br>
+        <input type="text" id="med-name" name="med-name"><br>
+        <input type="button" id="rem-med-form-add" value="Remove Medication">
+        <input type="button" id="rem-med-form-cancel" value="Cancel">
+    </form>`;
+
+    medsList = [];
+    for (m = 0; m < medTable.length; m++){
+        medsList.push((m + 1) + ":\t" + medTable[m]); 
+    }
+
+    medsListHTML = "\n<br />\n";
+    for (m = 0; m < medsList.length; m++){
+        medsListHTML += ("<p>" + medsList[m] + "</p>\n");
+    }
+
+    medTableElem.innerHTML += medsListHTML;
+
+    const remMedFormName = document.getElementById("med-name");
+    const remMedFormBtn = document.getElementById("rem-med-form-add");
+    const remMedFormCancelBtn = document.getElementById("rem-med-form-cancel");
+    
+    remMedFormBtn.onclick = function (){
+        console.log(remMedFormName.value);
+        const medIndex = (parseInt(remMedFormName.value) - 1);
+        if (medIndex == 0){
+            medTable.shift();
+        }
+        else {
+            medTable.splice(medIndex, medIndex);
+        }
+
+        displayMedTbl();
+    }
+    remMedFormCancelBtn.onclick = function (){
+        displayMedTbl();
+    }
+
+}
+
+
+function displayMedTbl(){
+    medTableHTML = "";
+    if (medTable.length == 0){
+        medTableHTML += 
+        `<h1>No medications added</h1>
+        <p>Click the "+ Add" button to add a medication reminder.</p>`;
+    }
+    else {
+        medTableHTML += "<ul>\n";
         for (m of medTable){
-            medTableElem.innerHTML += ("<li>\n" + m + 
+            medTableHTML += ("<li>\n" + "<b>" + m + "</b>\n" +
             `<br />
-            <input type="time"> 
+            <label>
+                Time: 
+                <input type="time">
+            </label>
             <label class="switch">
                 <input type="checkbox">
                 <span class="slider round"></span>
             </label>` + 
             "\n</li>\n"); 
         }
-        // medTableElem.innerHTML += "\n</ul>"
-    }
-    addMedFormCancelBtn.onclick = function (){
-        if (medTable.length == 0){
-            medTableElem.innerHTML = 
-            `<h1>No medications added</h1>
-            <p>Click the "+ Add" button to add a medication reminder.</p>`;
-        }
-        else {
-            // PUT IN SEPARATE FUNCTION SOMETIME
-            // medTableElem.innerHTML = "<ul>\n";
-            medTableElem.innerHTML = "";
-            for (m of medTable){
-                medTableElem.innerHTML += ("<li>\n" + m + 
-                `<br />
-                <input type="time"> 
-                <label class="switch">
-                    <input type="checkbox">
-                    <span class="slider round"></span>
-                </label>` + 
-                "\n</li>\n"); 
-            }
-            // medTableElem.innerHTML += "\n</ul>"
-        }
+        medTableHTML += "</ul>";
     }
 
-
-};
+    medTableElem.innerHTML = medTableHTML;
+}
 

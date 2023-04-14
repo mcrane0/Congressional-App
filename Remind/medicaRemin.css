@@ -50,9 +50,11 @@ div {
     text-align: center;
     color: #20425E;
 }
+ul {
+    list-style-type: none;
+}
 li {
     margin:20px;
-    list-style-type: none;
 }
 
 /* The switch - the box around the slider */
